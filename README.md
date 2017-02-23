@@ -2,15 +2,15 @@
 
 The framework is trained and tested on ShapeNetCore55 for 3D shape recognition and retrieval. It consists of two networks, a ResNet for deep feature extraction and a Fusion Network which fuses the extracted deep features with hand-crafted one.
 
-## Dataset ##
+# Dataset #
 The framework is trained and evaluated on ShapeNetCore55 benchmark
 
-## Dependencies ##
+# Dependencies #
 * cunn `luarocks install cunn`
 * cudnn `luarocks install cudnn`
 * Download ResNet (resnet-18 used) to the diretory Network1/models/resnet
 
-## Run ##
+# Run #
 Network1 and Network2 run seperately. Run Network1 to extract deep features per rendered view of a 3D shape. Run Network2 to fuse your hand-crafted features with the previously extracted deep ones. For retrieval remove the last Linear layer (classification layer) to get the 3D descriptor.
 
 ### Network1 ###
@@ -20,7 +20,7 @@ Network1 and Network2 run seperately. Run Network1 to extract deep features per 
 `cd/Network2`
 `th main.lua [options]`
 
-## Examples ##
+# Examples #
 
 ### Network1 ###
 Training example: place your training data in a directory named trainSet (each class is a subdirectory) and train the model with batch size 128 for your e.g. 224x224 images.
