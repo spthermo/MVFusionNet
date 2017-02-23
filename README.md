@@ -24,7 +24,9 @@ Network1 and Network2 run seperately. Run Network1 to extract deep features per 
 
 ### Network1 ###
 Training example: place your training data in a directory named trainSet (each class is a subdirectory) and train the model with batch size 128 for your e.g. 224x224 images.
+
 `th main.lua -mode train -inputDataPath /path/to/sets -dirName trainSet -batchSize 128 -imageSize 224`
 
 Feature extraction example: choose a name for the directory where the 't7' files will be extracted. Choose the set that you want to pass through the model (e.g. valSet). The 't7' will be a vector with Nx512 size where N is the number of the rendered views of the 3D shape.
+
 `th main.lua -mode test -inputDataPath /path/to/sets -dirName valSet -targetDirName t7/val_features -batchSize 128 -imageSize 224`
